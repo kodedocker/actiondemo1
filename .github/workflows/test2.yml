@@ -1,4 +1,4 @@
-name: Hello Github Action
+name: Github Action V2
 
 # Event That Trigger
 on:
