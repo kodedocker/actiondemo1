@@ -1,0 +1,7 @@
+name: Hello Github Action
+
+# Event That Trigger
+on:
+  push:
+    branches:
+      - main
