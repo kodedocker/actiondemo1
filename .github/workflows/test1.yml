@@ -14,5 +14,8 @@ jobs:
     steps:
       - name: Step 1 Checkout
         run: echo 'hello world, lets checkout'
+      
+      - name: Step 2 Compile
+        run: echo 'lets compile'
     
 
