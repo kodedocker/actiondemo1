@@ -1,4 +1,4 @@
-name: Action Strategy V3
+name: Start Using Actions V3
 
 on:
   push:
@@ -14,3 +14,6 @@ jobs:
     steps:
       - name: Step1 Job1
         run: echo "Step 1 Job1"
+        
+      - name: Check out repository
+        uses: actions/checkout@v3
