@@ -5,3 +5,14 @@ on:
   push:
     branches:
       - main
+
+# Execute Job
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Step 1 Checkout
+        run: echo 'hello world, lets checkout'
+    
+
