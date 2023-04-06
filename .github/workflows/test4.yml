@@ -17,6 +17,8 @@ jobs:
     strategy:
       matrix:
         node_version: ['8', '10', '12']
+        os: [ubuntu-latest, ubuntu-22.04]
+
 
     runs-on: ubuntu-latest
     
