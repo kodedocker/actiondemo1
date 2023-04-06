@@ -12,15 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     
     outputs:
-      output1: ${{steps.build_step.outputs.output1}}
+      output1: ${{steps.step1.outputs.output1}}
     
     steps:
       - id: step1
         name: step1
-        run: echo 'output=Hello World' >> $GITHUB_OUTPUT
+        run: echo 'output1=Hello World' >> $GITHUB_OUTPUT
       - id: step2
         name: step2
-        run: echo ${{steps.step1.outputs.output}}
+        run: echo ${{steps.step1.outputs.output1}}
 
   job2:
     name: job2
