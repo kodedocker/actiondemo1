@@ -1,4 +1,6 @@
 
+name: TEST 5
+
 on:
   push:
     branches:
@@ -12,4 +14,9 @@ jobs:
     steps:
       - id: step1
         name: step1
-        run: echo 'Hello World'
+        run: echo 'output=Hello World' >> $GITHUB_OUTPUT
+      - id: step2
+        name: step2
+        run: echo ${{steps.step1.outputs.output}}
+
+      
