@@ -5,17 +5,19 @@ on:
     branches:
     - main
 
+env:
+  key1: Value1
+  key2: Value2
+  os: ubuntu-latest
+  version: 12
 
 jobs:
   job1:
     name: JOB1
-    env:
-      KEY1: VALUE1
-      KEY2: Valu2
     runs-on: ubuntu-latest
     
     steps:
       - name: 'JOB1STEP1'
         run: |
-          echo 'JOB1 STEP1'
-          echo 'JOB1 STEP11' $KEY1
+          echo 'JOB1 STEP1' $key1 
+          echo 'JOB1 STEP11' $key1 $key2 $os $version
