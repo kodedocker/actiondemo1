@@ -16,4 +16,6 @@ jobs:
     
     steps:
       - name: 'JOB1STEP1'
-        run: echo 'JOB1 STEP1'
+        run: |
+          echo 'JOB1 STEP1'
+          echo 'JOB1 STEP11' $KEY1
