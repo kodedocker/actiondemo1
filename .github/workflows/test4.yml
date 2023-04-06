@@ -9,7 +9,11 @@ on:
 jobs:
   job1:
     name: JOB1
+    env:
+      KEY1: VALUE1
+      KEY2: Valu2
     runs-on: ubuntu-latest
+    
     steps:
       - name: 'JOB1STEP1'
         run: echo 'JOB1 STEP1'
