@@ -19,5 +19,5 @@ jobs:
     steps:
       - name: 'JOB1STEP1'
         run: |
-          echo 'JOB1 STEP1' {{ $key1 }} 
-          echo 'JOB1 STEP11' $key1 
+          echo 'JOB1 STEP1' $key1
+          echo 'JOB1 STEP11' $key1 $key2 $os $version 
