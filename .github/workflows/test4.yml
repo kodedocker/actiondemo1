@@ -19,7 +19,9 @@ jobs:
         node_version: ['10', '12']
         os: [ubuntu-latest, ubuntu-22.04]
 
-
+    outputs:
+      output1: ${{ steps.build_step.outputs.output1 }}
+      
     runs-on: ${{matrix.os}}
     
     steps:
@@ -30,6 +32,10 @@ jobs:
           echo 'Repository Variables' ${{ vars.VAR1 }} ${{ vars.VAR2 }}
           echo 'Environment Varaiables' ${{env.key1}}
           echo 'Secret variabls ' ${{secrets.SECRET1}}
+          echo "output1=$OUTPUT1" >> $GITHUB_OUTPUT
+          
+      - name: STEP2
+        run: echo ${{ needs.build.outputs.output1 }}
       
       - name: 'Setup Node'
         uses: actions/setup-node@v3
