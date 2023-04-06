@@ -35,7 +35,7 @@ jobs:
           echo "output1=100" >> $GITHUB_OUTPUT
           
       - name: STEP2
-        run: echo ${{ needs.build.outputs.output1 }}
+        run: echo ${{ needs.job1.outputs.output1 }}
       
       - name: 'Setup Node'
         uses: actions/setup-node@v3
