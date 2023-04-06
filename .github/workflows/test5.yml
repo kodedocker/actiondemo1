@@ -1,1 +1,15 @@
 
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    
+    steps:
+      - id: step1
+        name: step1
+        run: echo 'Hello World'
