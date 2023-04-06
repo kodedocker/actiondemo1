@@ -14,7 +14,7 @@ env:
 jobs:
   job1:
     name: JOB1
-    runs-on: ubuntu-latest
+    runs-on: $os
     
     steps:
       - name: 'JOB1STEP1'
