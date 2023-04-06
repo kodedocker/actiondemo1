@@ -14,10 +14,22 @@ env:
 jobs:
   job1:
     name: JOB1
+    strategy:
+      matrix:
+        node_version: ['8', '10', '12']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
     runs-on: ubuntu-latest
     
     steps:
       - name: 'JOB1STEP1'
         run: |
           echo 'JOB1 STEP1' $key1
-          echo 'JOB1 STEP11' $key1 $key2 $os $version 
+          echo 'JOB1 STEP11' $key1 $key2 $os $version
+      
+      - name: 'Setup Node'
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node_version}}
+          
+
