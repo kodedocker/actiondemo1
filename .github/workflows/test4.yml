@@ -32,7 +32,7 @@ jobs:
           echo 'Repository Variables' ${{ vars.VAR1 }} ${{ vars.VAR2 }}
           echo 'Environment Varaiables' ${{env.key1}}
           echo 'Secret variabls ' ${{secrets.SECRET1}}
-          echo "output1=$OUTPUT1" >> $GITHUB_OUTPUT
+          echo "output1=100" >> $GITHUB_OUTPUT
           
       - name: STEP2
         run: echo ${{ needs.build.outputs.output1 }}
