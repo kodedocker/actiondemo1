@@ -29,6 +29,7 @@ jobs:
           echo 'JOB1 STEP11' $key1 $key2 $os $version
           echo 'Repository Variables' ${{ vars.VAR1 }} ${{ vars.VAR2 }}
           echo 'Environment Varaiables' ${{env.key1}}
+          echo 'Secret variabls ' ${{secrets.SECRET1}}
       
       - name: 'Setup Node'
         uses: actions/setup-node@v3
