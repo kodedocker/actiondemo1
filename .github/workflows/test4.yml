@@ -20,7 +20,7 @@ jobs:
         os: [ubuntu-latest, ubuntu-22.04]
 
 
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
     
     steps:
       - name: 'JOB1STEP1'
