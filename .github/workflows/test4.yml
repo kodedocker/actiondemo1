@@ -27,6 +27,7 @@ jobs:
         run: |
           echo 'JOB1 STEP1' $key1
           echo 'JOB1 STEP11' $key1 $key2 $os $version
+          echo {{$vars}}
       
       - name: 'Setup Node'
         uses: actions/setup-node@v3
