@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Chekcout
+        uses: actions/checkout@v2.7.0
+
       - name: step1
         id: step1
         run: |
