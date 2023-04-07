@@ -15,4 +15,4 @@ jobs:
     
     steps:
       - name: STEP1
-        run: echo Hello World
+        run: echo Hello World ${{env.SERVICE_ADDRESS}}
