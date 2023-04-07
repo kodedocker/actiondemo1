@@ -6,6 +6,9 @@ on:
     - main
   workflow_dispatch:
   
+concurrency: 
+  group: staging_deployment
+  cancel-in-progress: true
 
 permissions: 
   contents: write
