@@ -11,12 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      
-      
       - name: step1
         id: step1
         run: |
-            chmod +x ./path/to/your/script.sh
+            chmod +x ./test.sh
             ./test.sh
         shell: bash
 
