@@ -19,3 +19,8 @@ jobs:
             chmod +x ./test.sh
             ./test.sh
 
+      - name: step2
+        run: |
+            chmod +x ./.github/scripts/first.sh
+            ./.github/scripts/first.sh
+
