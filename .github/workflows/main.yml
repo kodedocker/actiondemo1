@@ -17,4 +17,4 @@ jobs:
       - name: STEP1
         run: echo 'Hello Worlddd' ${{vars.SERVICE_ADDRESS}} ${{vars.KEY1}}
       - name: STEP2
-        run: echo ${{github}}
+        run: echo ${{github}} ${{github.workspace}}
