@@ -26,6 +26,7 @@ jobs:
         name: STEP1
         run: echo 'Hello Worlddd' ${{vars.SERVICE_ADDRESS}} ${{vars.KEY1}}
       - name: STEP2
+        if: 1+1 == 2
         run: echo ${{github}} ${{github.workspace}} ${{github.event_name}} ${{github.ref_name}}
       
         
