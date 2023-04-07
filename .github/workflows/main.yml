@@ -11,7 +11,7 @@ jobs:
   job1:
     name: JOB1
     runs-on: ubuntu-latest
-    environment: DEV
+    environment: QA
     
     steps:
       - name: STEP1
