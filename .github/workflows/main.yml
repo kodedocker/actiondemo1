@@ -7,14 +7,26 @@ on:
   workflow_dispatch:
   
 
+permissions: 
+  contents: write
+
 jobs:
   job1:
     name: JOB1
     runs-on: ubuntu-latest
     environment: DEV
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        version: [14]
     
     steps:
-      - name: STEP1
+      - id: STEP1
+        name: STEP1
         run: echo 'Hello Worlddd' ${{vars.SERVICE_ADDRESS}} ${{vars.KEY1}}
       - name: STEP2
         run: echo ${{github}} ${{github.workspace}}
+      - id: Step3
+        name: Step3
+        
