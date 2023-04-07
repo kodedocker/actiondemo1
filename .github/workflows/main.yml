@@ -1,0 +1,16 @@
+name: Working with Environment
+
+on:
+  push:
+    branches:
+    - main
+    
+
+jobs:
+  job1:
+    name: JOB1
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: STEP1
+        run: echo Hello World
