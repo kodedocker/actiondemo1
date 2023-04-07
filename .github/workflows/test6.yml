@@ -14,3 +14,5 @@ jobs:
       - name: step1
         id: step1
         run: ./.github/scripts/first.sh
+        shell: bash
+
