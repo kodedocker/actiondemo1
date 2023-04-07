@@ -27,6 +27,5 @@ jobs:
         run: echo 'Hello Worlddd' ${{vars.SERVICE_ADDRESS}} ${{vars.KEY1}}
       - name: STEP2
         run: echo ${{github}} ${{github.workspace}}
-      - id: Step3
-        name: Step3
+      
         
