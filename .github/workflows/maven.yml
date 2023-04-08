@@ -21,5 +21,8 @@ jobs:
             
       - name: Maven Test
         run: mvn clean test -B package --file pom.xml
-        
+      
+      - name: List all
+        run: ls -R
+      
         
