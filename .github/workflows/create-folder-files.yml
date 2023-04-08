@@ -1,7 +1,7 @@
 name: Create Folder and Files
 
 on: 
-  push:
+  pull_request:
     branches:
       - main
 
