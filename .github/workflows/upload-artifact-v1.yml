@@ -1,0 +1,19 @@
+name: Upload Artifact V1
+
+on: [workflow_dispatch]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Step1 Make Folder
+        run: mkdir downloads
+      - name: Make Files
+        run: |
+          cd downloads
+          echo "Delhi" > 1.html
+          echo "Calcutta" > 2.html
+          echo "Chennai" > 3.html
+      - name: List files
+        run: ls -R
+    
