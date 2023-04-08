@@ -1,0 +1,11 @@
+name: ReUse Workflow Demo
+
+on: [workflow_dispatch]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Call Another Workflow
+        uses: ./.github/workflows/maven.yml@main
