@@ -1,6 +1,6 @@
 name: THIS IS REUSABLE
 
-
+on: [workflow_call]
 
 jobs:
   job1:
