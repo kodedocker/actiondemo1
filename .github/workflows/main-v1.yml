@@ -25,13 +25,23 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-  
       
+      - name: Maven Test
+        run: mvn clean test -B package --file pom.xml
+      
       
       - name: Maven Build
         run: mvn clean install -B package --file pom.xml
             
-      - name: Maven Test
-        run: mvn clean test -B package --file pom.xml
       
       - name: List all
-        run: ls -R
+        run: |
+          mkdir assets
+          cp target/*.jar assets/
+          ls -R assets
       
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: java-assets
+          path: assets
+    
