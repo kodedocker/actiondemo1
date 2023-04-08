@@ -1,4 +1,4 @@
-name: Download Artifact V1
+name: Create Folder and Files
 
 on: [workflow_dispatch]
 
