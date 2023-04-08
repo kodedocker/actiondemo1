@@ -1,19 +1,11 @@
 name: ReUse Workflow Demo
 
-on: 
-  push:
-    branches: 
-      - main
+on: [workflow_dispatch]
 
 jobs:
   job1:
-    runs-on: ubuntu-latest
+    uses: ./.github/workflows/maven1.yml
+      
     
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-    
-      - name: My Action
-        uses: ./.github/workflows/maven1.yml
-
+      
       
