@@ -1,10 +1,6 @@
 name: Working with Environment
 
-on:
-  push:
-    branches:
-    - main
-  workflow_dispatch:
+on: workflow_dispatch
   
 concurrency: 
   group: staging_deployment
