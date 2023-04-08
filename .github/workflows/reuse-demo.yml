@@ -10,5 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
     
-      - name: Call Another Workflow
+      - name: My Action
         uses: ./.github/workflows/maven.yml@main
+
+      
