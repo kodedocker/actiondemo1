@@ -1,0 +1,29 @@
+name: THIS IS REUSABLE
+
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: STEP1 CHECKOUT
+        uses: actions/checkout@v3
+        
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' 
+          java-version: '11'
+          cache: 'maven'
+
+      - name: Maven Build
+        run: mvn clean install -B package --file pom.xml
+            
+      - name: Maven Test
+        run: mvn clean test -B package --file pom.xml
+      
+      - name: List all
+        run: ls -R
+      
+        
