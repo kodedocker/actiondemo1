@@ -15,7 +15,8 @@ jobs:
         with:
           distribution: 'temurin' 
           java-version: '11'
-      
+          cache: 'maven'
+
       - name: Maven Build
         run: mvn clean install -B package --file pom.xml
             
