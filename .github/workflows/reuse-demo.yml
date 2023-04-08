@@ -7,5 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+    
       - name: Call Another Workflow
         uses: ./.github/workflows/maven.yml@main
