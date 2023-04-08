@@ -12,6 +12,8 @@ jobs:
         run: |
           cd downloads
           echo "Delhi" > 1.html
+          echo "Calcutta" > 2.html
+          echo "Chennai" > 3.html
       - name: List files
         run: ls -R
     
