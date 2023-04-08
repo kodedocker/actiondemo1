@@ -16,14 +16,6 @@ jobs:
           distribution: 'temurin' 
           java-version: '11'
 
-      - name: Maven Build
-        run: mvn clean install -B package --file pom.xml
-            
-      - name: Maven Test
-        run: mvn clean test -B package --file pom.xml
-      
-      - name: List all
-        run: ls -R
         
       - name: Cache local Maven repository
         uses: actions/cache@v3
@@ -33,4 +25,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-  
       
-        
+      
+      - name: Maven Build
+        run: mvn clean install -B package --file pom.xml
+            
+      - name: Maven Test
+        run: mvn clean test -B package --file pom.xml
+      
+      - name: List all
+        run: ls -R
+      
