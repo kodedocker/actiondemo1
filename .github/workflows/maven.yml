@@ -1,1 +1,21 @@
 name: Java Maven Build Test Cache and Upload Artifacts
+
+on: [workflow_dispatch]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: STEP1 CHECKOUT
+        uses: actions/checkout@v2.7.0
+        
+      - name: Setup Java
+        uses: actions/setup-java@v1.4.4
+        with:
+          distribution: 'temurin' 
+          java-version: '11'
+      
+      - name: Maven Build
+          
+
