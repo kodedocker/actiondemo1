@@ -17,5 +17,9 @@ jobs:
           java-version: '11'
       
       - name: Maven Build
-          
-
+        run: mvn clean install -B package --file pom.xml
+            
+      - name: Maven Test
+        run: mvn clean test -B package --file pom.xml
+        
+        
